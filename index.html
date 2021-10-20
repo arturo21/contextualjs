@@ -1,0 +1,97 @@
+<html>
+<head>
+	<title>ArtCompressor 0.1</title>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdn.underdevelopment.work/bulma/css/bulma.min.css">
+	<link rel="stylesheet" href="https://cdn.underdevelopment.work/dropzonejs/min/dropzone.min.css">
+	<link rel="stylesheet" href="https://cdn.underdevelopment.work/loader/loader.css">
+	<style>
+		.context-menu-orange-theme {
+		  background: #444;
+			color: #fff;
+		  hr {
+			background-color: #eee;
+		  }
+
+		  // ? text color for each item
+		  & > *:not(hr) {
+			color: #fff;
+
+			&:hover {
+			  background: #444;
+				color: #fff;
+			}
+		  }
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+	  <div class="navbar-brand">
+		<a class="navbar-item" href="index.html">
+		  Contextual 0.1
+		</a>
+
+		<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+		  <span aria-hidden="true"></span>
+		  <span aria-hidden="true"></span>
+		  <span aria-hidden="true"></span>
+		</a>
+	  </div>
+	  <div id="navbarBasicExample" class="navbar-menu">
+		<div class="navbar-start">
+		  <a class="navbar-item" href="index.html">
+		    Home
+		  </a>
+		</div>
+	  </div>
+	</nav>
+
+	<div class="modal is-active">
+	  <div class="modal-card">
+		<header class="modal-card-head">
+		  <p class="modal-card-title">Modal title</p>
+		  <button class="delete" aria-label="close"></button>
+		</header>
+		<section class="modal-card-body">
+		  <!-- Content ... -->
+		</section>
+		<footer class="modal-card-foot">
+		  <button class="button is-success">Save changes</button>
+		  <button class="button">Cancel</button>
+		</footer>
+	  </div>
+	</div>
+	<script type="text/javascript" src="https://cdn.underdevelopment.work/generaljs/general.min.js"></script>
+	<script type="text/javascript" src="dist/contextual.min.js"></script>
+		<script type="text/javascript">
+			genrl.run(function(){
+				menuData= [
+					{
+					  label: 'Crear Acceso Directo',
+					  callback: () => {
+						// ? your code here
+					  },
+					},
+					'hr',
+					{
+					  label: 'Crear Archivo',
+					  callback: () => {
+						// ? your code here
+					  },
+					},
+					{
+					  label: 'Cerrar Sesión',
+					  callback: () => {
+						// ? your code here
+					  },
+					},
+				];
+				contextual.config({
+					menu:menuData,
+					tag:"body"
+				});
+			});
+		</script>
+</body>
+</html>
